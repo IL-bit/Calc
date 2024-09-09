@@ -7,3 +7,4 @@ export const mul = createAction('MUL');
 export const ent = createAction('ENT');
 export const cls = createAction('CLS');
 export const upd = createAction('UPD');
+export const pon = createAction('PON');

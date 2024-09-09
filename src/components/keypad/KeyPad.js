@@ -1,5 +1,5 @@
 import {useDispatch, useSelector} from 'react-redux';
-import {sum, min, del, mul, ent, cls, upd} from './../../actions.js'
+import {sum, min, del, mul, ent, cls, upd, pon} from './../../actions.js'
 import './KeyPad.css';
 
 const KeyPad = () => {
@@ -33,7 +33,10 @@ const KeyPad = () => {
 
             case '.':
                 dispatch(upd(value));
-                dispatch(ent(value));
+                dispatch(pon(value));
+                break;
+
+            default:
                 break;
         };
     };

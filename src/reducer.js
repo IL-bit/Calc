@@ -50,8 +50,34 @@ const RootReducer = createReducer(initialState, builder => {
         })
         .addCase('SUM', (state) => {
             state.action = '+';
-            state.count = parseFloat(state.value);
+            if (state.count === '') {
+                state.count = parseFloat(state.value);
+            }
             state.value = '';
+        })
+        .addCase('MIN', (state) => {
+            state.action = '-';
+            if (state.count === '') {
+                state.count = parseFloat(state.value);
+            }
+            state.value = '';
+        })
+        .addCase('MUL', (state) => {
+            state.action = '*';
+            if (state.count === '') {
+                state.count = parseFloat(state.value);
+            }
+            state.value = '';
+        })
+        .addCase('DEL', (state) => {
+            state.action = '/';
+            if (state.count === '') {
+                state.count = parseFloat(state.value);
+            }
+            state.value = '';
+        })
+        .addCase('PON', (state) => {
+            state.value += '.';
         })
         
 });
